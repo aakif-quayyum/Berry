@@ -45,7 +45,7 @@ from .adafruit_ble_transparent_uart import TransparentUARTService
 
 __version__ = "0.0.0-auto.0"
 __repo__ = (
-    "https://github.com/adafruit/Adafruit_CircuitPython_BLE_BerryMed_Pulse_Oximeter.git"
+    "https://github.com/aakif-quayyum/Berry.git"
 )
 
 
@@ -147,7 +147,5 @@ class BerryMedPulseOximeterService(TransparentUARTService):
         return PulseOximeterValues(
             valid=valid,
             finger_present=finger_present,
-            spo2=spo2,
-            pulse_rate=pulse_rate,
             pleth=pleth,
         )
