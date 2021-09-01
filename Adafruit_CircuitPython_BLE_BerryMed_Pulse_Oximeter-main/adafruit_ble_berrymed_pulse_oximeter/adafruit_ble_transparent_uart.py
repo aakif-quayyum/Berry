@@ -17,7 +17,7 @@ from adafruit_ble.characteristics.stream import StreamOut, StreamIn
 
 __version__ = "0.0.0-auto.0"
 __repo__ = (
-    "https://github.com/adafruit/Adafruit_CircuitPython_BLE_Contec_Pulse_Oximeter.git"
+    "https://github.com/aakif-quayyum/Berry.git"
 )
 
 
@@ -35,12 +35,12 @@ class TransparentUARTService(Service):
     uuid = VendorUUID("49535343-FE7D-4AE5-8FA9-9FAFD205E455")
     _server_tx = StreamOut(
         uuid=VendorUUID("49535343-1E4D-4BD9-BA61-23C647249616"),
-        timeout=1.0,
+        timeout=0.01,
         buffer_size=64,
     )
     _server_rx = StreamIn(
         uuid=VendorUUID("49535343-8841-43F4-A8D4-ECBE34729BB3"),
-        timeout=1.0,
+        timeout=0.01,
         buffer_size=64,
     )
 
